@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        BuilderHotel defaultHotel = new BuilderHotel.Builder()
+                .setRoomNumber(123)
+                .setRoomType("lux, standard, suite")
+                .setPricePerNight(1000)
+                .setReservedRooms(23)
+                .setRevenue(23000)
+                .build();
+
+BuilderHotel newHotel = new BuilderHotel.Builder()
+        .setRoomNumber(456)
+        .setRoomType("standard, deluxe, suite, apartment")
+        .setPricePerNight(100000)
+        .setReservedRooms(243)
+        .setRevenue(24400000)
+        .build();
+
+System.out.println(newHotel);
+System.out.println(defaultHotel);
+
+
+    }
+
+}
