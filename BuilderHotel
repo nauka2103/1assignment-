@@ -1,0 +1,56 @@
+public class BuilderHotel {
+    private final int roomNumber;
+    private final String roomType;
+    private final int pricePerNight;
+    private final int reservedRooms;
+    private final int revenue;
+
+private BuilderHotel (Builder builder){
+    this.roomNumber = builder.roomNumber;
+    this.roomType = builder.roomType;
+    this.pricePerNight = builder.pricePerNight;
+    this.reservedRooms = builder.reservedRooms;
+    this.revenue = builder.revenue;
+
+}
+static class Builder{
+    private int roomNumber;
+    private String roomType;
+    private int pricePerNight;
+    private int reservedRooms;
+    private int revenue;
+
+    public Builder setRoomNumber(int RoomNumber) {
+        this.roomNumber = RoomNumber;
+        return this;
+    }
+    public Builder setRoomType(String RoomType) {
+        this.roomType = RoomType;
+        return this;
+    }
+    public Builder setPricePerNight(int PricePerNight) {
+        this.pricePerNight = PricePerNight;
+        return this;
+    }
+    public Builder setReservedRooms(int ReservedRooms) {
+        this.reservedRooms = ReservedRooms;
+        return this;
+    }
+    public Builder setRevenue(int Revenue) {
+        this.revenue = Revenue;
+        return this;
+    }
+    public BuilderHotel build(){
+        return new BuilderHotel(this);
+    }
+
+}
+@Override
+    public String toString() {
+    return  "RoomNumber: " + roomNumber +
+            "\nRoomType: " + roomType +
+            "\nPricePerNight: " + pricePerNight +
+            "\nReservedRooms: " + reservedRooms +
+            "\nRevenue: " + revenue + "\n";
+}
+}
